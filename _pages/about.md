@@ -27,7 +27,7 @@ I am always interested in discussing new ideas and potential collaborations. Fee
   <img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations">
 </a> | 
 <a href='https://github.com/harrysyz99'>GitHub</a> | 
-Total Citations: <strong><span id='total_cit'>Loading...</span></strong>
+Total Citations: <strong><span id='total_cit'>Setting up...</span></strong>
 
 
 # 🔥 News
@@ -131,7 +131,22 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.error('Error fetching Google Scholar data:', error);
             var container = document.getElementById('publications-container');
-            container.innerHTML = '<p><em>Publications data is being generated. Please check back in a few minutes after the GitHub Action completes.</em></p>';
+            // Update citation count to show setup needed
+            var totalCitElement = document.getElementById('total_cit');
+            if (totalCitElement) {
+                totalCitElement.innerHTML = '<a href="https://github.com/harrysyz99/harrysyz99.github.io/actions" target="_blank">Setup needed</a>';
+            }
+            container.innerHTML = '<div style="background-color: #f0f7ff; border: 1px solid #0066cc; padding: 15px; border-radius: 5px; margin: 10px 0;">' +
+                '<p><strong>📚 Setting up Google Scholar integration...</strong></p>' +
+                '<p>To display your publications automatically:</p>' +
+                '<ol>' +
+                '<li>Go to <a href="https://github.com/harrysyz99/harrysyz99.github.io/settings/secrets/actions" target="_blank">Repository Secrets</a></li>' +
+                '<li>Add secret: Name = <code>GOOGLE_SCHOLAR_ID</code>, Value = <code>pez-fEUAAAAJ</code></li>' +
+                '<li>Go to <a href="https://github.com/harrysyz99/harrysyz99.github.io/actions" target="_blank">Actions tab</a> and enable workflows</li>' +
+                '<li>Run the "Get Citation Data" workflow</li>' +
+                '</ol>' +
+                '<p>Your publications will appear here automatically after setup!</p>' +
+                '</div>';
         });
 });
 </script>

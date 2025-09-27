@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Google Scholar Integration</title>
+</head>
+<body>
+    <h1>Google Scholar Data Test</h1>
+    <div id="status">Checking...</div>
+    <div id="data"></div>
+    
+    <script>
+        // Test if the data exists
+        const repoUrl = 'https://raw.githubusercontent.com/harrysyz99/harrysyz99.github.io/google-scholar-stats/gs_data.json';
+        const cdnUrl = 'https://cdn.jsdelivr.net/gh/harrysyz99/harrysyz99.github.io@google-scholar-stats/gs_data.json';
+        
+        fetch(repoUrl)
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Data not found');
+                }
+            })
+            .then(data => {
+                document.getElementById('status').innerHTML = '✅ Google Scholar data found!';
+                document.getElementById('data').innerHTML = `
+                    <p><strong>Name:</strong> ${data.name}</p>
+                    <p><strong>Total Citations:</strong> ${data.citedby}</p>
+                    <p><strong>Publications:</strong> ${Object.keys(data.publications).length}</p>
+                `;
+            })
+            .catch(error => {
+                document.getElementById('status').innerHTML = '❌ Google Scholar data not found yet. Please complete the setup steps.';
+                document.getElementById('data').innerHTML = `
+                    <p>The GitHub Action needs to run first to generate the data.</p>
+                    <p>Error: ${error.message}</p>
+                `;
+            });
+    </script>
+</body>
+</html>
