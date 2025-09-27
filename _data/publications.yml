@@ -1,0 +1,19 @@
+# Manual publication data
+# Update this file with your publications
+# The website will use this as a fallback when Google Scholar is unavailable
+
+publications:
+  # Example format:
+  # - title: "Your Paper Title Here"
+  #   authors: "Shiyang Zhang, Co-author Name"
+  #   venue: "Conference/Journal Name 2024"
+  #   year: 2024
+  #   url: "https://link-to-paper.com"
+  #   citations: 0
+  #   type: "conference"  # or "journal", "preprint", etc.
+
+# Summary statistics (update manually or leave as 0)
+stats:
+  total_citations: 0
+  h_index: 0
+  i10_index: 0

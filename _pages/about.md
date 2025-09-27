@@ -131,22 +131,44 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.error('Error fetching Google Scholar data:', error);
             var container = document.getElementById('publications-container');
-            // Update citation count to show setup needed
             var totalCitElement = document.getElementById('total_cit');
             if (totalCitElement) {
-                totalCitElement.innerHTML = '<a href="https://github.com/harrysyz99/harrysyz99.github.io/actions" target="_blank">Setup needed</a>';
+                totalCitElement.innerHTML = '0';
             }
-            container.innerHTML = '<div style="background-color: #f0f7ff; border: 1px solid #0066cc; padding: 15px; border-radius: 5px; margin: 10px 0;">' +
-                '<p><strong>📚 Setting up Google Scholar integration...</strong></p>' +
-                '<p>To display your publications automatically:</p>' +
-                '<ol>' +
-                '<li>Go to <a href="https://github.com/harrysyz99/harrysyz99.github.io/settings/secrets/actions" target="_blank">Repository Secrets</a></li>' +
-                '<li>Add secret: Name = <code>GOOGLE_SCHOLAR_ID</code>, Value = <code>pez-fEUAAAAJ</code></li>' +
-                '<li>Go to <a href="https://github.com/harrysyz99/harrysyz99.github.io/actions" target="_blank">Actions tab</a> and enable workflows</li>' +
-                '<li>Run the "Get Citation Data" workflow</li>' +
-                '</ol>' +
-                '<p>Your publications will appear here automatically after setup!</p>' +
-                '</div>';
+            
+            // Use manual publication data as fallback
+            {% if site.data.publications %}
+            var manualPubs = {{ site.data.publications.publications | jsonify }};
+            if (manualPubs && manualPubs.length > 0) {
+                container.innerHTML = '<p><em>Showing manually entered publications (Google Scholar temporarily unavailable)</em></p>';
+                
+                manualPubs.forEach((pub, index) => {
+                    var pubDiv = document.createElement('div');
+                    pubDiv.style.marginBottom = '1.5em';
+                    var pubHtml = '<p>' + (index + 1) + '. ';
+                    pubHtml += pub.authors.replace(/Shiyang Zhang/gi, '<strong>Shiyang Zhang</strong>') + '. ';
+                    pubHtml += '"<a href="' + (pub.url || '#') + '" target="_blank">' + pub.title + '</a>." ';
+                    pubHtml += '<em>' + pub.venue + '</em>. ';
+                    if (pub.citations > 0) {
+                        pubHtml += '<span style="color: #666;">Citations: ' + pub.citations + '</span>';
+                    }
+                    pubHtml += '</p>';
+                    pubDiv.innerHTML = pubHtml;
+                    container.appendChild(pubDiv);
+                });
+                
+                if (totalCitElement) {
+                    totalCitElement.innerHTML = '{{ site.data.publications.stats.total_citations }}';
+                }
+            } else {
+            {% endif %}
+                container.innerHTML = '<div style="background-color: #f9f9f9; border: 1px solid #ddd; padding: 15px; border-radius: 5px; margin: 10px 0;">' +
+                    '<p><em>Google Scholar integration is experiencing issues. Your publications will appear here once the service is restored.</em></p>' +
+                    '<p>In the meantime, you can add publications manually by editing <code>_data/publications.yml</code></p>' +
+                    '</div>';
+            {% if site.data.publications %}
+            }
+            {% endif %}
         });
 });
 </script>
