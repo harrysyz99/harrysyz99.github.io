@@ -23,7 +23,11 @@ My research focuses on developing foundation models and AI agents to tackle comp
 
 I am always interested in discussing new ideas and potential collaborations. Feel free to reach out via email!
 
-<a href='https://scholar.google.com/citations?user=pez-fEUAAAAJ&hl=en'>Google Scholar</a> | <a href='https://github.com/harrysyz99'>GitHub</a>
+<a href='https://scholar.google.com/citations?user=pez-fEUAAAAJ&hl=en'>
+  <img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations">
+</a> | 
+<a href='https://github.com/harrysyz99'>GitHub</a> | 
+Total Citations: <strong><span id='total_cit'>Loading...</span></strong>
 
 
 # 🔥 News
@@ -32,7 +36,105 @@ I am always interested in discussing new ideas and potential collaborations. Fee
 
 # 📝 Publications 
 
-*Coming soon! Stay tuned for updates on my research publications.*
+<div id="publications-container">
+  <p><em>Loading publications from Google Scholar...</em></p>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    {% if site.google_scholar_stats_use_cdn %}
+    var gsDataBaseUrl = 'https://cdn.jsdelivr.net/gh/{{ site.repository }}@'
+    {% else %}
+    var gsDataBaseUrl = 'https://raw.githubusercontent.com/{{ site.repository }}/'
+    {% endif %}
+    
+    fetch(gsDataBaseUrl + 'google-scholar-stats/gs_data.json')
+        .then(response => response.json())
+        .then(data => {
+            var container = document.getElementById('publications-container');
+            container.innerHTML = ''; // Clear loading message
+            
+            // Update total citations in the about section
+            var totalCitElement = document.getElementById('total_cit');
+            if (totalCitElement) {
+                totalCitElement.innerHTML = data.citedby || '0';
+            }
+            
+            // Get publications and sort by year (newest first)
+            var pubs = Object.values(data.publications || {});
+            pubs.sort((a, b) => (b.bib.pub_year || 0) - (a.bib.pub_year || 0));
+            
+            if (pubs.length === 0) {
+                container.innerHTML = '<p><em>No publications found yet. Publications will appear here once they are indexed by Google Scholar.</em></p>';
+                return;
+            }
+            
+            // Group publications by year
+            var pubsByYear = {};
+            pubs.forEach(pub => {
+                var year = pub.bib.pub_year || 'In Press';
+                if (!pubsByYear[year]) pubsByYear[year] = [];
+                pubsByYear[year].push(pub);
+            });
+            
+            // Display publications by year
+            Object.keys(pubsByYear).sort((a, b) => {
+                if (a === 'In Press') return -1;
+                if (b === 'In Press') return 1;
+                return b - a;
+            }).forEach(year => {
+                var yearSection = document.createElement('div');
+                yearSection.className = 'publication-year-section';
+                yearSection.innerHTML = '<h3 style="margin-top: 1.5em;">' + year + '</h3>';
+                
+                pubsByYear[year].forEach((pub, index) => {
+                    var pubDiv = document.createElement('div');
+                    pubDiv.className = 'publication-item';
+                    pubDiv.style.marginBottom = '1.5em';
+                    
+                    // Build authors string with your name in bold
+                    var authors = pub.bib.author || '';
+                    authors = authors.replace(/Shiyang Zhang/gi, '<strong>Shiyang Zhang</strong>');
+                    
+                    var pubHtml = '<p>';
+                    pubHtml += (index + 1) + '. ';
+                    pubHtml += authors + '. ';
+                    pubHtml += '"<a href="' + (pub.pub_url || '#') + '" target="_blank">' + pub.bib.title + '</a>." ';
+                    
+                    if (pub.bib.venue) {
+                        pubHtml += '<em>' + pub.bib.venue + '</em>';
+                        if (pub.bib.volume) pubHtml += ', ' + pub.bib.volume;
+                        if (pub.bib.number) pubHtml += '(' + pub.bib.number + ')';
+                        if (pub.bib.pages) pubHtml += ', pp. ' + pub.bib.pages;
+                        pubHtml += '. ';
+                    }
+                    
+                    if (pub.num_citations > 0) {
+                        pubHtml += '<span style="color: #666;">Citations: ' + pub.num_citations + '</span>';
+                    }
+                    
+                    pubHtml += '</p>';
+                    pubDiv.innerHTML = pubHtml;
+                    yearSection.appendChild(pubDiv);
+                });
+                
+                container.appendChild(yearSection);
+            });
+            
+            // Add total publications count
+            var summary = document.createElement('p');
+            summary.style.marginTop = '2em';
+            summary.style.fontStyle = 'italic';
+            summary.innerHTML = 'Total publications: ' + pubs.length + ' | Total citations: ' + (data.citedby || 0);
+            container.appendChild(summary);
+        })
+        .catch(error => {
+            console.error('Error fetching Google Scholar data:', error);
+            var container = document.getElementById('publications-container');
+            container.innerHTML = '<p><em>Publications data is being generated. Please check back in a few minutes after the GitHub Action completes.</em></p>';
+        });
+});
+</script>
 
 # 🎖 Honors and Awards
 *Updates coming soon!* 
