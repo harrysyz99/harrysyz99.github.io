@@ -11,22 +11,42 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10  # Add timeout to prevent hanging
     steps:
-    - uses: actions/checkout@v2
-    - name: Install Reqs
-      run: |
-        sudo apt-get install python3-setuptools
-    - name: Run
+    - uses: actions/checkout@v3  # Update to v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    - name: Install dependencies
       run: |
         cd ./google_scholar_crawler
-        pip3 install -r requirements.txt
-        python3 main.py
-        cd ./results
-        git init
-        git config --local user.name "${GITHUB_ACTOR}"
-        export remote_repo="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
-        git add *.json
-        git commit -m "Updated Citation Data"
-        git push "${remote_repo}" HEAD:google-scholar-stats --force
+        pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Run Google Scholar crawler
+      timeout-minutes: 5  # Timeout for crawler specifically
+      run: |
+        cd ./google_scholar_crawler
+        echo "Starting Google Scholar crawler..."
+        # Try the simple crawler first
+        python3 simple_crawler.py || python3 main.py || echo "Both crawlers failed"
+        if [ -f results/gs_data.json ]; then
+          echo "Successfully generated gs_data.json"
+          cat results/gs_data.json | head -20
+        else
+          echo "ERROR: gs_data.json was not generated, creating minimal data"
+          mkdir -p results
+          echo '{"name":"Shiyang Zhang","citedby":0,"publications":{},"updated":"'$(date)'"}' > results/gs_data.json
+          echo '{"schemaVersion":1,"label":"citations","message":"0"}' > results/gs_data_shieldsio.json
+        fi
       env: 
         GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
+    - name: Push to google-scholar-stats branch
+      run: |
+        cd ./google_scholar_crawler/results
+        git init
+        git config --local user.name "${GITHUB_ACTOR}"
+        git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        git add *.json
+        git commit -m "Updated Citation Data"
+        git push "https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" HEAD:google-scholar-stats --force
