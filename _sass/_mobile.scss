@@ -43,10 +43,10 @@ $small-mobile: 480px;
 
   /* Author profile mobile optimization */
   .author__avatar {
-    display: inline-block;
-    width: 80px !important;
-    height: 80px !important;
-    margin-right: 10px;
+    display: block !important;
+    width: 100px !important;
+    height: 100px !important;
+    margin: 0 auto 1em auto !important;
 
     img {
       width: 100%;
