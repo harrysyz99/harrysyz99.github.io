@@ -49,7 +49,14 @@ document.addEventListener('DOMContentLoaded', function() {
     {% endif %}
 
     fetch(gsDataBaseUrl + '/gs_data.json')
-        .then(response => response.json())
+        .then(response => {
+            console.log('Fetching from URL:', gsDataBaseUrl + '/gs_data.json');
+            console.log('Response status:', response.status);
+            if (!response.ok) {
+                throw new Error('Network response was not ok: ' + response.status);
+            }
+            return response.json();
+        })
         .then(data => {
             var container = document.getElementById('publications-container');
             container.innerHTML = ''; // Clear loading message
@@ -137,8 +144,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Use manual publication data as fallback
+            console.log('Using fallback data due to error:', error.message);
             {% if site.data.publications %}
             var manualPubs = {{ site.data.publications.publications | jsonify }};
+            console.log('Manual publications available:', manualPubs);
             if (manualPubs && manualPubs.length > 0) {
                 container.innerHTML = '<p><em>Showing manually entered publications (Google Scholar temporarily unavailable)</em></p>';
                 

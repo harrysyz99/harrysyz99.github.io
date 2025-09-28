@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Google Scholar Data</title>
+</head>
+<body>
+    <h1>Google Scholar Data Test</h1>
+    <p>Total Citations: <span id="citations">Loading...</span></p>
+    <p>Total Publications: <span id="pub_count">Loading...</span></p>
+    <div id="publications">Loading publications...</div>
+
+    <script>
+        // Direct fetch test
+        fetch('https://cdn.jsdelivr.net/gh/harrysyz99/harrysyz99.github.io@google-scholar-stats/gs_data.json')
+            .then(response => {
+                console.log('Response status:', response.status);
+                return response.json();
+            })
+            .then(data => {
+                console.log('Data received:', data);
+                document.getElementById('citations').innerText = data.citedby || '0';
+                document.getElementById('pub_count').innerText = Object.keys(data.publications || {}).length;
+
+                var pubHtml = '<ul>';
+                for (var key in data.publications) {
+                    var pub = data.publications[key];
+                    pubHtml += '<li>' + pub.bib.title + ' (' + pub.bib.pub_year + ') - Citations: ' + pub.num_citations + '</li>';
+                }
+                pubHtml += '</ul>';
+                document.getElementById('publications').innerHTML = pubHtml;
+            })
+            .catch(error => {
+                console.error('Error loading data:', error);
+                document.getElementById('citations').innerText = 'Error';
+                document.getElementById('pub_count').innerText = 'Error';
+                document.getElementById('publications').innerHTML = '<p>Error loading publications: ' + error.message + '</p>';
+            });
+    </script>
+</body>
+</html>
