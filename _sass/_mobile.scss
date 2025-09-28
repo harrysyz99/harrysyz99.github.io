@@ -24,17 +24,19 @@ $small-mobile: 480px;
     }
   }
 
-  /* Sidebar for mobile */
+  /* Sidebar for mobile - show it! */
   .sidebar {
-    display: none;
-
     @media (max-width: $mobile-width) {
+      display: block !important;
+      float: none !important;
+      width: 100% !important;
+      margin: 0 auto 2em auto !important;
+      text-align: center;
+
       &.sticky {
         position: relative !important;
         top: auto !important;
         clear: both;
-        width: 100% !important;
-        margin: 0 0 2em 0;
       }
     }
   }

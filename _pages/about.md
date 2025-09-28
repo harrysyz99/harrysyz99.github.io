@@ -31,7 +31,7 @@ Total Citations: <strong><span id='total_cit'>Setting up...</span></strong>
 
 
 # 🔥 News
-- *2024.09*: &nbsp;🎉🎉 Started my Ph.D. journey at Yale University in Professor van Dijk's lab!
+- *2024.09*: &nbsp;🎉🎉 Started my Ph.D. journey at Yale University in Professor David van Dijk's lab!
 - *2024.05*: &nbsp;🎉🎉 Graduated with M.S. from Columbia University.
 
 # 📖 Education
