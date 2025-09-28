@@ -1,0 +1,224 @@
+/* ==========================================================================
+   Mobile Styles
+   ========================================================================== */
+
+/* Mobile breakpoints */
+$mobile-width: 768px;
+$small-mobile: 480px;
+
+/* Mobile-first responsive design */
+@media screen and (max-width: $mobile-width) {
+
+  /* Layout adjustments */
+  .page {
+    padding-right: 1em !important;
+    padding-left: 1em !important;
+  }
+
+  /* Navigation optimization */
+  .masthead {
+    padding: 0.5em;
+
+    .masthead__inner-wrap {
+      padding: 0.5em;
+    }
+  }
+
+  /* Sidebar for mobile */
+  .sidebar {
+    display: none;
+
+    @media (max-width: $mobile-width) {
+      &.sticky {
+        position: relative !important;
+        top: auto !important;
+        clear: both;
+        width: 100% !important;
+        margin: 0 0 2em 0;
+      }
+    }
+  }
+
+  /* Author profile mobile optimization */
+  .author__avatar {
+    display: inline-block;
+    width: 80px !important;
+    height: 80px !important;
+    margin-right: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .author__content {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 10px;
+  }
+
+  .author__name {
+    font-size: 1.2em !important;
+    margin: 0;
+  }
+
+  .author__bio {
+    font-size: 0.9em !important;
+    margin-top: 5px;
+  }
+
+  .author__urls-wrapper {
+    margin-top: 10px;
+  }
+
+  /* Publications mobile layout */
+  .publication-item {
+    padding: 0.5em 0 !important;
+    margin-bottom: 1em !important;
+
+    p {
+      font-size: 0.9em !important;
+      line-height: 1.4 !important;
+    }
+  }
+
+  .publication-year-section {
+    h3 {
+      font-size: 1.2em !important;
+      margin-top: 1em !important;
+    }
+  }
+
+  /* Selected Publications mobile */
+  #selected-publications {
+    div {
+      margin-bottom: 1.5em !important;
+
+      h3 {
+        font-size: 1.1em !important;
+        margin-top: 1em !important;
+      }
+
+      p {
+        font-size: 0.85em !important;
+        margin-left: 0 !important;
+        padding: 0 0.5em !important;
+      }
+    }
+  }
+
+  /* News section mobile */
+  h1 {
+    font-size: 1.5em !important;
+  }
+
+  h2 {
+    font-size: 1.3em !important;
+  }
+
+  ul li {
+    font-size: 0.9em !important;
+    margin-bottom: 0.5em;
+  }
+
+  /* Education section mobile */
+  ul {
+    padding-left: 1em !important;
+  }
+
+  /* Footer mobile */
+  .page__footer {
+    margin-top: 2em !important;
+    padding: 1em !important;
+  }
+
+  /* Citation badge */
+  img[src*="shields.io"] {
+    max-width: 100px;
+    height: auto;
+  }
+}
+
+/* Extra small mobile devices */
+@media screen and (max-width: $small-mobile) {
+
+  .page {
+    padding-right: 0.5em !important;
+    padding-left: 0.5em !important;
+  }
+
+  .author__avatar {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .author__name {
+    font-size: 1em !important;
+  }
+
+  .author__bio {
+    font-size: 0.8em !important;
+  }
+
+  h1 {
+    font-size: 1.3em !important;
+  }
+
+  h2 {
+    font-size: 1.1em !important;
+  }
+
+  .publication-item p {
+    font-size: 0.8em !important;
+  }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+
+  /* Make links easier to tap */
+  a {
+    padding: 5px;
+    margin: -5px;
+    display: inline-block;
+    min-height: 44px;
+    min-width: 44px;
+    line-height: 44px;
+  }
+
+  /* Bigger buttons for touch */
+  .btn {
+    padding: 12px 20px !important;
+    font-size: 1em !important;
+  }
+}
+
+/* Landscape mode adjustments */
+@media screen and (max-width: $mobile-width) and (orientation: landscape) {
+
+  .author__avatar {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .page {
+    padding-top: 0.5em !important;
+  }
+}
+
+/* Print styles for mobile */
+@media print {
+  .sidebar,
+  .page__footer,
+  .masthead {
+    display: none !important;
+  }
+
+  .page {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
