@@ -43,12 +43,12 @@ Total Citations: <strong><span id='total_cit'>Setting up...</span></strong>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     {% if site.google_scholar_stats_use_cdn %}
-    var gsDataBaseUrl = 'https://cdn.jsdelivr.net/gh/{{ site.repository }}@'
+    var gsDataBaseUrl = 'https://cdn.jsdelivr.net/gh/{{ site.repository }}@google-scholar-stats'
     {% else %}
-    var gsDataBaseUrl = 'https://raw.githubusercontent.com/{{ site.repository }}/'
+    var gsDataBaseUrl = 'https://raw.githubusercontent.com/{{ site.repository }}/google-scholar-stats'
     {% endif %}
-    
-    fetch(gsDataBaseUrl + 'google-scholar-stats/gs_data.json')
+
+    fetch(gsDataBaseUrl + '/gs_data.json')
         .then(response => response.json())
         .then(data => {
             var container = document.getElementById('publications-container');
