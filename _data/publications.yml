@@ -3,8 +3,25 @@
 # The website will use this as a fallback when Google Scholar is unavailable
 
 publications:
-  # Example format:
-  # - title: "Your Paper Title Here"
+  - title: "Analysis of Amino Acids in the Roots of Tamarix ramosissima by Application of Exogenous Potassium (K+) under NaCl Stress"
+    authors: "Shiyang Zhang, et al."
+    venue: "International Journal of Molecular Sciences"
+    year: 2022
+    url: "#"
+    citations: 17
+    type: "journal"
+
+  - title: "Transcriptome and Metabonomic Analysis of Tamarix ramosissima Potassium (K+) Channels and Transporters in Response to NaCl Stress"
+    authors: "Shiyang Zhang, et al."
+    venue: "Genes"
+    year: 2022
+    url: "#"
+    citations: 17
+    type: "journal"
+
+  # Add more publications here following the same format
+  # Example:
+  # - title: "Your Next Paper Title"
   #   authors: "Shiyang Zhang, Co-author Name"
   #   venue: "Conference/Journal Name 2024"
   #   year: 2024
@@ -14,6 +31,6 @@ publications:
 
 # Summary statistics (update manually or leave as 0)
 stats:
-  total_citations: 0
-  h_index: 0
-  i10_index: 0
+  total_citations: 102
+  h_index: 5
+  i10_index: 3
