@@ -1,0 +1,224 @@
+{
+  "name": "Shiyang Zhang",
+  "affiliation": "PhD student at Yale University, Master student at Columbia University",
+  "email": "harryzhang957@gmail.com",
+  "citedby": 101,
+  "citedby5y": 101,
+  "hindex": 7,
+  "hindex5y": 7,
+  "i10index": 4,
+  "i10index5y": 4,
+  "updated": "2025-09-29 12:45:07.329062",
+  "publications": {
+    "pub_0": {
+      "bib": {
+        "title": "Analysis of Amino Acids in the Roots of Tamarix ramosissima by Application of Exogenous Potassium (K+) under NaCl Stress",
+        "author": "Yahui Chen and Shiyang Zhang and Shanfeng Du and Xiaomian Zhang and Jiang Jiang and Guangyu Wang",
+        "venue": "International Journal of Molecular Sciences",
+        "pub_year": 2022,
+        "volume": "23",
+        "number": "16",
+        "pages": "9331"
+      },
+      "num_citations": 17,
+      "pub_url": "https://www.mdpi.com/1422-0067/23/16/9331",
+      "author_pub_id": "pub_0"
+    },
+    "pub_1": {
+      "bib": {
+        "title": "Transcriptome and Metabonomic Analysis of Tamarix ramosissima Potassium (K+) Channels and Transporters in Response to NaCl Stress",
+        "author": "Yahui Chen and Shiyang Zhang and Shanfeng Du and Jiang Jiang and Guangyu Wang",
+        "venue": "Genes",
+        "pub_year": 2022,
+        "volume": "13",
+        "number": "8",
+        "pages": "1313"
+      },
+      "num_citations": 17,
+      "pub_url": "https://www.mdpi.com/2073-4425/13/8/1313",
+      "author_pub_id": "pub_1"
+    },
+    "pub_2": {
+      "bib": {
+        "title": "Effects of Exogenous (K+) Potassium Application on Plant Hormones in the Roots of Tamarix ramosissima under NaCl Stress",
+        "author": "Yahui Chen and Shiyang Zhang and Shanfeng Du and Guangyu Wang and Jinchi Zhang and Jiang Jiang",
+        "venue": "Genes",
+        "pub_year": 2022,
+        "volume": "13",
+        "number": "10",
+        "pages": "1803"
+      },
+      "num_citations": 14,
+      "pub_url": "https://www.mdpi.com/2073-4425/13/10/1803",
+      "author_pub_id": "pub_2"
+    },
+    "pub_3": {
+      "bib": {
+        "title": "Analysis of the main antioxidant enzymes in the roots of Tamarix ramosissima under NaCl stress by applying exogenous potassium (K+)",
+        "author": "Yahui Chen and Haijia Li and Shiyang Zhang and Shanfeng Du and Jinchi Zhang and Zhizhong Song and Jiang Jiang",
+        "venue": "Frontiers in plant science",
+        "pub_year": 2023,
+        "volume": "14",
+        "number": "",
+        "pages": "1114266"
+      },
+      "num_citations": 12,
+      "pub_url": "https://www.frontiersin.org/articles/10.3389/fpls.2023.1114266/full",
+      "author_pub_id": "pub_3"
+    },
+    "pub_4": {
+      "bib": {
+        "title": "Analysis of the Antioxidant Mechanism of Tamarix ramosissima Roots under NaCl Stress Based on Physiology, Transcriptomic and Metabolomic",
+        "author": "Yahui Chen and Haijia Li and Shiyang Zhang and Shanfeng Du and Guangyu Wang and Jinchi Zhang and Jiang Jiang",
+        "venue": "Antioxidants",
+        "pub_year": 2022,
+        "volume": "11",
+        "number": "12",
+        "pages": "2362"
+      },
+      "num_citations": 8,
+      "pub_url": "https://www.mdpi.com/2076-3921/11/12/2362",
+      "author_pub_id": "pub_4"
+    },
+    "pub_5": {
+      "bib": {
+        "title": "Intelligence at the Edge of Chaos",
+        "author": "Shiyang Zhang and Aakash Patel and Syed A Rizvi and Nianchen Liu and Sizhuang He and Amin Karbasi and Emanuele Zappala and David van Dijk",
+        "venue": "",
+        "pub_year": 2024,
+        "volume": "",
+        "number": "",
+        "pages": ""
+      },
+      "num_citations": 7,
+      "pub_url": "https://arxiv.org/abs/2410.02536",
+      "author_pub_id": "pub_5"
+    },
+    "pub_6": {
+      "bib": {
+        "title": "Rankadaptor: Hierarchical dynamic low-rank adaptation for structural pruned llms",
+        "author": "Changhai Zhou and Shijie Han and Shiyang Zhang and Shichao Weng and Zekai Liu and Cheng Jin",
+        "venue": "arXiv preprint arXiv:2406.15734",
+        "pub_year": 2024,
+        "volume": "",
+        "number": "",
+        "pages": ""
+      },
+      "num_citations": 7,
+      "pub_url": "https://www.researchgate.net/profile/Shiyang-Zhang-10/publication/381666982_RankAdaptor_Hierarchical_Dynamic_Low-Rank_Adaptation_for_Structural_Pruned_LLMs/links/668a04d0f3b61c4e2cb75973/RankAdaptor-Hierarchical-Dynamic-Low-Rank-Adaptation-for-Structural-Pruned-LLMs.pdf",
+      "author_pub_id": "pub_6"
+    },
+    "pub_7": {
+      "bib": {
+        "title": "Effects of Exogenous Potassium (K+) Application on the Antioxidant Enzymes Activities in Leaves of Tamarix ramosissima under NaCl Stress",
+        "author": "Yahui Chen and Shiyang Zhang and Shanfeng Du and Xiaomian Zhang and Guangyu Wang and Jiefan Huang and Jiang Jiang",
+        "venue": "Genes",
+        "pub_year": 2022,
+        "volume": "13",
+        "number": "9",
+        "pages": "1507"
+      },
+      "num_citations": 7,
+      "pub_url": "https://www.mdpi.com/2073-4425/13/9/1507",
+      "author_pub_id": "pub_7"
+    },
+    "pub_8": {
+      "bib": {
+        "title": "Scaling Large Language Models for Next-Generation Single-Cell Analysis",
+        "author": "Syed Asad Rizvi and Daniel Levine and Aakash Patel and Shiyang Zhang and Eric Wang and Sizhuang He and David Zhang and Cerise Tang and Zhuoyang Lyu and Rayyan Darji and Chang Li and Emily Sun and David Jeong and Lawrence Zhao and Jennifer Kwan and David Braun and Brian Hafler and Jeffrey Ishizuka and Rahul M Dhodapkar and Hattie Chung and Shekoofeh Azizi and Bryan Perozzi and David van Dijk",
+        "venue": "bioRxiv",
+        "pub_year": 2025,
+        "volume": "",
+        "number": "",
+        "pages": "2025.04. 14.648850"
+      },
+      "num_citations": 5,
+      "pub_url": "https://www.biorxiv.org/content/10.1101/2025.04.14.648850.abstract",
+      "author_pub_id": "pub_8"
+    },
+    "pub_9": {
+      "bib": {
+        "title": "Coast: Intelligent time-adaptive neural operators",
+        "author": "Zhikai Wu1 Shiyang Zhang2 Sizhuang He and Sifan Wang2 Min Zhu2 Anran Jiao and Lu Lu and David van Dijk",
+        "venue": "arXiv preprint arXiv:2502.08574",
+        "pub_year": 2025,
+        "volume": "",
+        "number": "",
+        "pages": ""
+      },
+      "num_citations": 3,
+      "pub_url": "https://www.researchgate.net/profile/Lu-Lu-51/publication/388955191_COAST_Intelligent_Time-Adaptive_Neural_Operators/links/67b23945645ef274a4833b51/COAST-Intelligent-Time-Adaptive-Neural-Operators.pdf",
+      "author_pub_id": "pub_9"
+    },
+    "pub_10": {
+      "bib": {
+        "title": "Efficient fine-tuning of quantized models via adaptive rank and bitwidth",
+        "author": "Changhai Zhou and Shijie Han and Shiyang Zhang and Yuhua Zhou and Weizhong Zhang and Cheng Jin",
+        "venue": "arXiv preprint arXiv:2505.03802",
+        "pub_year": 2025,
+        "volume": "",
+        "number": "",
+        "pages": ""
+      },
+      "num_citations": 2,
+      "pub_url": "https://arxiv.org/abs/2505.03802",
+      "author_pub_id": "pub_10"
+    },
+    "pub_11": {
+      "bib": {
+        "title": "The Influence of Forest Litter Characteristics on Bacterial and Fungal Community Diversity in the Picea crassifolia Ecosystem on the Qinghai–Tibet Plateau",
+        "author": "Yahui Chen and Haijia Li and Shiyang Zhang and Min Zhang and Hui Pan and Fangwei Zhou and Lei Wang",
+        "venue": "Forests",
+        "pub_year": 2024,
+        "volume": "15",
+        "number": "5",
+        "pages": "797"
+      },
+      "num_citations": 2,
+      "pub_url": "https://www.mdpi.com/1999-4907/15/5/797",
+      "author_pub_id": "pub_11"
+    },
+    "pub_12": {
+      "bib": {
+        "title": "Dynamic Operator Optimization for Efficient Multi-Tenant LoRA Model Serving",
+        "author": "Changhai Zhou and Yuhua Zhou and Shiyang Zhang and Yibin Wang and Zekai Liu",
+        "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+        "pub_year": 2025,
+        "volume": "39",
+        "number": "21",
+        "pages": "22910-22918"
+      },
+      "num_citations": 0,
+      "pub_url": "https://ojs.aaai.org/index.php/AAAI/article/view/34453",
+      "author_pub_id": "pub_12"
+    },
+    "pub_13": {
+      "bib": {
+        "title": "AutoMixQ: Self-Adjusting Quantization for High Performance Memory-Efficient Fine-Tuning",
+        "author": "Changhai Zhou and Shiyang Zhang and Yuhua Zhou and Zekai Liu and Shichao Weng",
+        "venue": "arXiv preprint arXiv:2411.13814",
+        "pub_year": 2024,
+        "volume": "",
+        "number": "",
+        "pages": ""
+      },
+      "num_citations": 0,
+      "pub_url": "https://arxiv.org/abs/2411.13814",
+      "author_pub_id": "pub_13"
+    },
+    "pub_14": {
+      "bib": {
+        "title": "Multi-Omics Analysis of Exogenous Potassium (K+)’s Role in Alleviating Trehalose Effects Under NaCl Stress in Tamarix ramosissima",
+        "author": "Yahui Chen and Shiyang Zhang and Min Zhang and Dezong Sui and Jiang Jiang and Lei Wang",
+        "venue": "Forests",
+        "pub_year": 2024,
+        "volume": "15",
+        "number": "11",
+        "pages": "1905"
+      },
+      "num_citations": 0,
+      "pub_url": "https://www.mdpi.com/1999-4907/15/11/1905",
+      "author_pub_id": "pub_14"
+    }
+  }
+}
