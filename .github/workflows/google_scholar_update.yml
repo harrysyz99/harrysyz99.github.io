@@ -31,13 +31,12 @@ jobs:
       timeout-minutes: 2
       continue-on-error: true
       run: |
-        cd google_scholar_crawler
-        python update_scholar.py || echo "Crawler failed, will retry next time"
+        python google_scholar_crawler/update_scholar.py || echo "Crawler failed, will retry next time"
 
     - name: Check if data was fetched
       id: check_data
       run: |
-        if [ -f "google_scholar_crawler/google-scholar-stats/gs_data.json" ]; then
+        if [ -f "google-scholar-stats/gs_data.json" ]; then
           echo "data_exists=true" >> $GITHUB_OUTPUT
         else
           echo "data_exists=false" >> $GITHUB_OUTPUT
@@ -46,7 +45,7 @@ jobs:
     - name: Push to google-scholar-stats branch
       if: steps.check_data.outputs.data_exists == 'true'
       run: |
-        cd google_scholar_crawler/google-scholar-stats
+        cd google-scholar-stats
         git init
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
