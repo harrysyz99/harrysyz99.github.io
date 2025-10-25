@@ -9,9 +9,9 @@ redirect_from:
 ---
 
 {% if site.google_scholar_stats_use_cdn %}
-{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@google-scholar-stats/google-scholar-stats/" %}
+{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@google-scholar-stats/" %}
 {% else %}
-{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/google-scholar-stats/google-scholar-stats/" %}
+{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/google-scholar-stats/" %}
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "gs_data_shieldsio.json" %}
 
@@ -93,9 +93,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var gsDataBaseUrl = 'https://raw.githubusercontent.com/{{ site.repository }}/google-scholar-stats'
     {% endif %}
 
-    fetch(gsDataBaseUrl + '/google-scholar-stats/gs_data.json')
+    fetch(gsDataBaseUrl + '/gs_data.json')
         .then(response => {
-            console.log('Fetching from URL:', gsDataBaseUrl + '/google-scholar-stats/gs_data.json');
+            console.log('Fetching from URL:', gsDataBaseUrl + '/gs_data.json');
             console.log('Response status:', response.status);
             if (!response.ok) {
                 throw new Error('Network response was not ok: ' + response.status);
