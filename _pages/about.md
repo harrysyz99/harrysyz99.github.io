@@ -26,8 +26,7 @@ I am always interested in discussing new ideas and potential collaborations. Fee
 <a href='https://scholar.google.com/citations?user=pez-fEUAAAAJ&hl=en'>
   <img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations">
 </a> |
-<a href='https://github.com/harrysyz99' target='_blank'>GitHub</a> |
-Total Citations: <strong><span id='total_cit'>Setting up...</span></strong>
+<a href='https://github.com/harrysyz99' target='_blank'>GitHub</a>
 
 
 # 🔥 News
@@ -106,12 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
             var container = document.getElementById('publications-container');
             container.innerHTML = ''; // Clear loading message
 
-            // Update total citations in the about section
-            var totalCitElement = document.getElementById('total_cit');
-            if (totalCitElement) {
-                totalCitElement.innerHTML = data.citedby || '0';
-            }
-
             // Get publications and sort by year (newest first)
             var pubs = Object.values(data.publications || {});
             pubs.sort((a, b) => (b.bib.pub_year || 0) - (a.bib.pub_year || 0));
@@ -183,10 +176,6 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.error('Error fetching Google Scholar data:', error);
             var container = document.getElementById('publications-container');
-            var totalCitElement = document.getElementById('total_cit');
-            if (totalCitElement) {
-                totalCitElement.innerHTML = '0';
-            }
 
             // Use manual publication data as fallback
             console.log('Using fallback data due to error:', error.message);
@@ -210,10 +199,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     pubDiv.innerHTML = pubHtml;
                     container.appendChild(pubDiv);
                 });
-
-                if (totalCitElement) {
-                    totalCitElement.innerHTML = '{{ site.data.publications.stats.total_citations }}';
-                }
             } else {
             {% endif %}
                 container.innerHTML = '<div style="background-color: #f9f9f9; border: 1px solid #ddd; padding: 15px; border-radius: 5px; margin: 10px 0;">' +
