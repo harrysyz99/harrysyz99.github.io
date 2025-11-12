@@ -37,7 +37,7 @@ I am always interested in discussing new ideas and potential collaborations. Fee
 - *2024.09 - Present*, **Ph.D. in Computer Science**, Yale University, New Haven, CT
   - Advisor: Professor David van Dijk
   - Research focus: Large language models, deep learning, and AI agents for biological discovery
-- *2022 - 2024*, **M.S. in Computer Science**, Columbia University, New York, NY
+- *2022 - 2024*, **M.S. in Operation Research**, Columbia University, New York, NY
 - *2018 - 2022*, **B.Sc. in Statistics**, University of British Columbia, Vancouver, Canada
 
 # 🌟 Selected Publications
