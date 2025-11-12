@@ -54,7 +54,7 @@ I am always interested in discussing new ideas and potential collaborations. Fee
 <div style="margin-bottom: 2em;">
   <h3 style="color: #333; margin-top: 1.5em;">Scaling Large Language Models for Next-Generation Single-Cell Analysis</h3>
   <p style="margin-left: 1em;">
-    Syed Asad Rizvi*, Daniel Levine*, Aakash Patel*, <strong>Shiyang Zhang</strong>, Eric Wang, Sizhuang He, David Zhang, et al.<br>
+    Syed Asad Rizvi*, Daniel Levine*, Aakash Patel*, <strong>Shiyang Zhang*</strong>, Eric Wang, Sizhuang He, David Zhang, et al.<br>
     <em>bioRxiv, 2025</em> | <a href="https://www.biorxiv.org/content/10.1101/2025.04.14.648850.abstract" target="_blank">Paper</a><br>
     <span style="color: #666;">Developing foundation models specifically designed for single-cell genomics data analysis.</span>
   </p>
@@ -63,7 +63,7 @@ I am always interested in discussing new ideas and potential collaborations. Fee
 <div style="margin-bottom: 2em;">
   <h3 style="color: #333; margin-top: 1.5em;">RankAdaptor: Hierarchical Dynamic Low-Rank Adaptation for Structural Pruned LLMs</h3>
   <p style="margin-left: 1em;">
-    Changhai Zhou, Shijie Han, <strong>Shiyang Zhang</strong>, Shichao Weng, Zekai Liu, Cheng Jin<br>
+    Changhai Zhou*, Shijie Han*, <strong>Shiyang Zhang*</strong>, Shichao Weng, Zekai Liu, Cheng Jin<br>
     <em>arXiv preprint, 2024</em> | <a href="https://arxiv.org/abs/2406.15734" target="_blank">Paper</a><br>
     <span style="color: #666;">Novel approach for efficient fine-tuning of large language models through dynamic rank adaptation.</span>
   </p>
