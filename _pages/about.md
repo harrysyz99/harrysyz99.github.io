@@ -30,8 +30,17 @@ I am always interested in discussing new ideas and potential collaborations. Fee
 
 
 # 🔥 News
-- *2024.09*: &nbsp;🎉🎉 Started my Ph.D. journey at Yale University in Professor David van Dijk's lab!
-- *2024.05*: &nbsp;🎉🎉 Graduated with M.S. from Columbia University.
+
+<ul class="news-list">
+  <li>
+    <span class="news-date">2024.09</span>
+    <span>Started my Ph.D. journey at Yale University in Professor David van Dijk's lab! 🎉</span>
+  </li>
+  <li>
+    <span class="news-date">2024.05</span>
+    <span>Graduated with M.S. from Columbia University. 🎓</span>
+  </li>
+</ul>
 
 # 📖 Education
 - *2024.09 - Present*, **Ph.D. in Computer Science**, Yale University, New Haven, CT
@@ -42,30 +51,30 @@ I am always interested in discussing new ideas and potential collaborations. Fee
 
 # 🌟 Selected Publications
 
-<div style="margin-bottom: 2em;">
-  <h3 style="color: #333; margin-top: 1.5em;">Intelligence at the Edge of Chaos</h3>
-  <p style="margin-left: 1em;">
+<div class="publication-item">
+  <h3>Intelligence at the Edge of Chaos</h3>
+  <p>
     <strong>Shiyang Zhang</strong>, Aakash Patel, Syed A Rizvi, Nianchen Liu, Sizhuang He, Amin Karbasi, Emanuele Zappala, David van Dijk<br>
     <em>arXiv preprint, 2024</em> | <a href="https://arxiv.org/abs/2410.02536" target="_blank">Paper</a><br>
-    <span style="color: #666;">A novel framework exploring the intersection of complexity theory and neural network dynamics.</span>
+    <span style="display:block; margin-top:0.5em; font-style:italic; color:#666;">A novel framework exploring the intersection of complexity theory and neural network dynamics.</span>
   </p>
 </div>
 
-<div style="margin-bottom: 2em;">
-  <h3 style="color: #333; margin-top: 1.5em;">Scaling Large Language Models for Next-Generation Single-Cell Analysis</h3>
-  <p style="margin-left: 1em;">
+<div class="publication-item">
+  <h3>Scaling Large Language Models for Next-Generation Single-Cell Analysis</h3>
+  <p>
     Syed Asad Rizvi*, Daniel Levine*, Aakash Patel*, <strong>Shiyang Zhang*</strong>, Eric Wang, Sizhuang He, David Zhang, et al.<br>
     <em>bioRxiv, 2025</em> | <a href="https://www.biorxiv.org/content/10.1101/2025.04.14.648850.abstract" target="_blank">Paper</a><br>
-    <span style="color: #666;">Developing foundation models specifically designed for single-cell genomics data analysis.</span>
+    <span style="display:block; margin-top:0.5em; font-style:italic; color:#666;">Developing foundation models specifically designed for single-cell genomics data analysis.</span>
   </p>
 </div>
 
-<div style="margin-bottom: 2em;">
-  <h3 style="color: #333; margin-top: 1.5em;">RankAdaptor: Hierarchical Dynamic Low-Rank Adaptation for Structural Pruned LLMs</h3>
-  <p style="margin-left: 1em;">
+<div class="publication-item">
+  <h3>RankAdaptor: Hierarchical Dynamic Low-Rank Adaptation for Structural Pruned LLMs</h3>
+  <p>
     Changhai Zhou*, Shijie Han*, <strong>Shiyang Zhang*</strong>, Shichao Weng, Zekai Liu, Cheng Jin<br>
     <em>arXiv preprint, 2024</em> | <a href="https://arxiv.org/abs/2406.15734" target="_blank">Paper</a><br>
-    <span style="color: #666;">Novel approach for efficient fine-tuning of large language models through dynamic rank adaptation.</span>
+    <span style="display:block; margin-top:0.5em; font-style:italic; color:#666;">Novel approach for efficient fine-tuning of large language models through dynamic rank adaptation.</span>
   </p>
 </div>
 
