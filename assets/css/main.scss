@@ -325,9 +325,14 @@
 
 /* 1. Hero Bio Section (Clean Intro) */
 .bio-hero {
-  padding: 1rem 0;
+  padding: 2rem 0; /* Increased breathing room */
   margin-bottom: 2rem;
   border-bottom: 1px solid $border-color;
+  
+  h1 {
+    margin-top: 0 !important; /* Force remove top margin */
+    margin-bottom: 0.5rem;
+  }
   
   p {
     font-size: 1.15rem;
