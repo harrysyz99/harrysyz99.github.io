@@ -21,10 +21,10 @@ redirect_from:
 <div class="bio-hero">
   <h1 style="margin-top: 0; font-size: 2em; font-weight: 800;">Hello, I'm Shiyang. 👋</h1>
   <p style="font-size: 1.1rem; margin-top: 1em;">
-    I am a first-year Ph.D. student in <strong>Professor David van Dijk's lab</strong> at <a href="https://www.yale.edu/" target="_blank">Yale University</a>. My work lies at the intersection of large language models, deep learning, and intelligent agent systems.
+    I am a first-year Ph.D. student in <strong>Professor David van Dijk's lab</strong> at <a href="https://www.yale.edu/" target="_blank">Yale University</a>. My work lies at the intersection of <strong>Large Language Models</strong>, <strong>Deep Learning</strong>, and <strong>Agent Systems</strong>.
   </p>
   <p style="margin-bottom: 0;">
-    Prior to Yale, I earned my M.S. from Columbia University and hold a B.Sc. in Statistics from the University of British Columbia. I am passionate about developing foundation models to tackle complex biological challenges.
+    Prior to Yale, I earned my M.S. from Columbia University and hold a B.Sc. in Statistics from the University of British Columbia. My research focuses on developing foundation models and agentic systems to unravel the complexities of biological systems.
   </p>
 </div>
 
