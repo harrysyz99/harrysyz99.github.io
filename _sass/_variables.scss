@@ -1,16 +1,20 @@
 /* ==========================================================================
-   Variables - Design Update (Fixed)
+   Variables - Final Fix (Restored All Dependencies)
    ========================================================================== */
 
-/* Typography - Clean & Modern */
+/* Typography 
+   ========================================================================== */
+
 $doc-font-size: 16;
 $paragraph-indent: false;
 $indent-var: 0.5em;
 
+/* Font Stacks (Modernized) */
 $sans-serif: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $serif: "Charter", "Bitstream Charter", "Sitka Text", Cambria, serif;
 $monospace: "SF Mono", "Menlo", "Monaco", Consolas, "Liberation Mono", "Courier New", monospace;
 
+/* Legacy Font Variables (Required by theme) */
 $sans-serif-narrow: $sans-serif;
 $helvetica: Helvetica, "Helvetica Neue", Arial, sans-serif;
 $georgia: Georgia, serif;
@@ -23,11 +27,31 @@ $global-font-family: $sans-serif;
 $header-font-family: $sans-serif;
 $caption-font-family: $serif;
 
-/* Colors - Yale Blue Theme */
-$yale-blue: #00356B; /* Yale Blue Core */
+/* Type Scale (Restored & Optimized)
+   这些是之前报错缺失的变量
+   ========================================================================== */
+$type-size-1: 2.441em;  // H1
+$type-size-2: 1.953em;  // H2
+$type-size-3: 1.5em;    // H3 (Previously causing error)
+$type-size-4: 1.25em;   // H4
+$type-size-5: 1em;      // Body
+$type-size-6: 0.9em;    // Small / Notice
+$type-size-7: 0.75em;   // Smaller
+$type-size-8: 0.65em;   // Tiny
+
+/* Colors 
+   ========================================================================== */
+
+/* Theme Colors (Yale Blue) */
+$yale-blue: #00356B; 
 $yale-light: #286dc0;
 $cool-gray: #f4f6f9;
 
+$primary-color: $yale-blue;
+$link-color: $yale-blue;
+$link-color-hover: $yale-light;
+
+/* UI Colors */
 $gray: #5e656d;
 $dark-gray: #2c3e50;
 $darker-gray: #1a2633;
@@ -41,21 +65,17 @@ $code-background-color: #f6f8fa;
 $code-background-color-dark: $light-gray;
 $border-color: #e1e4e8;
 
-$primary-color: $yale-blue;
-$link-color: $yale-blue;
-$link-color-hover: $yale-light;
+/* Navigation Colors */
 $masthead-link-color: $primary-color;
 $masthead-link-color-hover: $yale-light;
 
-/* LEGACY COLORS (Restored to fix build errors)
-   这些是 Notice 组件必须的变量
-*/
+/* Legacy/Utility Colors (Required by Notices/Buttons) */
 $success-color: #28a745;
 $warning-color: #ffc107;
 $danger-color: #dc3545;
 $info-color: #17a2b8;
 
-/* Brands (Optional but kept for compatibility) */
+/* Brand Colors (Keeping for compatibility) */
 $behance-color: #1769FF;
 $dribbble-color: #ea4c89;
 $facebook-color: #3b5998;
@@ -77,7 +97,8 @@ $vine-color: #00bf8f;
 $youtube-color: #bb0000;
 $xing-color: #006567;
 
-/* Breakpoints */
+/* Breakpoints 
+   ========================================================================== */
 @include breakpoint-set("to ems", true);
 $small: 600px !default;
 $medium: 768px !default;
@@ -85,7 +106,8 @@ $medium-wide: 900px !default;
 $large: 925px !default;
 $x-large: 1280px !default;
 
-/* Grid */
+/* Grid 
+   ========================================================================== */
 $right-sidebar-width-narrow: 0px;
 $right-sidebar-width: 0px;
 $right-sidebar-width-wide: 0px;
@@ -101,7 +123,8 @@ $susy: (
   global-box-sizing: border-box,
 );
 
-/* Other */
+/* Other 
+   ========================================================================== */
 $border-radius: 4px;
 $box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
 $navicon-width: 28px;
