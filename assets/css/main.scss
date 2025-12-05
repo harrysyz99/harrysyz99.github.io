@@ -1,23 +1,13 @@
 ---
 ---
 
-/*
- * Minimal Mistakes Jekyll Theme
- *
- * - Michael Rose
- * - mademistakes.com
- * - https://twitter.com/mmistakes
- *
-*/
-
-@import "vendor/breakpoint/breakpoint"; // media query mixins
+/* Import base styles */
+@import "vendor/breakpoint/breakpoint";
 @import "variables";
 @import "mixins";
 @import "vendor/susy/susy";
-
 @import "reset";
 @import "base";
-
 @import "utilities";
 @import "animations";
 @import "tables";
@@ -27,158 +17,211 @@
 @import "navigation";
 @import "footer";
 @import "syntax";
-
 @import "forms";
-
 @import "page";
 @import "archive";
 @import "sidebar";
-
 @import "vendor/font-awesome/fontawesome";
 @import "vendor/font-awesome/solid";
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
-@import "mobile"; // Mobile-specific styles
-@import "custom-animations"; // Custom animations and effects
-
-.paper-box {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border-bottom: 1px #efefef solid;
-    padding: 2em 0 2em 0;
-    
-
-    .paper-box-image{
-        justify-content: center;
-        display: flex;
-        width: 100%;
-        order: 2;
-        img {
-            max-width: 400px;
-            box-shadow: 3px 3px 6px #888;
-            object-fit: cover;
-        }
-    }
-    
-    .paper-box-text{
-        max-width: 100%;
-        order: 1;
-    }
-    
-    @include breakpoint($medium) {
-        .paper-box-image{
-            justify-content: left;
-            min-width: 200px;
-            max-width: 40%;
-            order: 1;
-        }
-        
-        .paper-box-text{
-            justify-content: left;
-            padding-left: 2em;
-            max-width: 60%;
-            order: 2;
-        }
-
-    }
-
-
-}
-
-$scroll_offset : 2em;
-h1:before, .anchor:before { 
-    content: ''; 
-    display: block; 
-    position: relative; 
-    width: 0; 
-    height: $scroll_offset; 
-    margin-top: -$scroll_offset;
-}
-
-.badge {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    position: absolute;
-    margin-top: .5em;
-    margin-left: -.5em;
-    color: white;
-    background-color: #00369f;
-    font-size: .8em;
-}
+@import "mobile";
+@import "custom-animations";
 
 /* =========================================
-   新增自定义样式 (New Custom Styles)
+   High-End UI Customizations
    ========================================= */
 
-/* 论文卡片样式 (Publication Card Styling) */
-.publication-item {
-  background: #fff;
-  border: 1px solid #e1e4e8;
-  border-radius: 8px; /* 圆角 */
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  transition: all 0.2s ease-in-out;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* 轻微阴影 */
-
-  /* 鼠标悬停效果 */
-  &:hover {
-    transform: translateY(-3px); /* 向上浮动 */
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12); /* 加深阴影 */
-    border-color: #0056b3; /* 边框变色 */
-  }
-
-  h3 {
-    margin-top: 0 !important;
-    margin-bottom: 0.5rem;
-    font-size: 1.25rem;
-    color: #24292e;
-    font-weight: 600;
-  }
-
+/* 1. Hero Bio Section (个人简介增强) */
+.bio-hero {
+  background: linear-gradient(to right, #f8faff, #ffffff);
+  border-left: 5px solid $primary-color;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  
   p {
-    margin-bottom: 0;
-    font-size: 0.95rem;
-    color: #586069;
-    line-height: 1.6;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
   }
 
   a {
     font-weight: 600;
-    color: $link-color;
     text-decoration: none;
-    &:hover {
-      text-decoration: underline;
+    border-bottom: 1px dashed $primary-color;
+    &:hover { border-bottom-style: solid; }
+  }
+}
+
+/* 2. Modern Timeline for News (时间轴新闻) */
+.timeline {
+  position: relative;
+  padding-left: 10px;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+
+  /* The vertical line */
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background: #e1e4e8;
+    border-radius: 2px;
+  }
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 1.2rem;
+
+  /* The dot on the timeline */
+  &::before {
+    content: '';
+    position: absolute;
+    left: -4px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid $primary-color;
+    box-shadow: 0 0 0 2px rgba(255,255,255,1);
+    transition: all 0.2s ease;
+  }
+
+  &:hover::before {
+    background: $primary-color;
+    transform: scale(1.2);
+  }
+
+  .timeline-date {
+    display: inline-block;
+    font-family: $monospace;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: $primary-color;
+    margin-right: 8px;
+    opacity: 0.85;
+  }
+
+  .timeline-content {
+    font-size: 0.95rem;
+    color: #333;
+  }
+}
+
+/* 3. Publication Cards (论文卡片) */
+.pub-card {
+  position: relative;
+  background: #fff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+
+  /* Accent Bar on Left */
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 4px;
+    background: $primary-color;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    border-color: rgba(0,53,107, 0.1);
+    
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  h3 {
+    font-family: $sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.4;
+  }
+
+  .pub-authors {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    
+    strong {
+      color: $primary-color;
+      font-weight: 600;
+    }
+  }
+
+  .pub-info {
+    font-family: $serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+  }
+
+  .pub-desc {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed #eee;
+  }
+
+  /* Pill Buttons for Links */
+  .pub-links {
+    margin-top: 0.8rem;
+    display: flex;
+    gap: 10px;
+    
+    a {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: $primary-color;
+      background: rgba(0,53,107, 0.05);
+      border-radius: 20px;
+      text-decoration: none;
+      transition: all 0.2s;
+
+      &:hover {
+        background: $primary-color;
+        color: #fff;
+        transform: scale(1.05);
+      }
     }
   }
 }
 
-/* 新闻列表样式 (News List Styling) */
-.news-list {
-  list-style: none; /* 移除默认圆点 */
-  padding-left: 0;
-  margin-top: 1em;
-  
-  li {
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: baseline;
-  }
-
-  /* 日期标签样式 */
-  .news-date {
-    font-family: $monospace;
-    font-size: 0.85em;
-    color: #0550ae;
-    background: #f1f8ff;
-    padding: 3px 8px;
+/* Badge Styling */
+.badge-blue {
+    display: inline-block;
+    padding: 2px 8px;
+    background: #e3f2fd;
+    color: #1565c0;
     border-radius: 4px;
-    min-width: 85px;
-    text-align: center;
-    margin-right: 1rem;
-    border: 1px solid rgba(5, 80, 174, 0.2);
-  }
+    font-size: 0.75rem;
+    font-weight: 600;
+    vertical-align: middle;
+    margin-left: 8px;
 }
