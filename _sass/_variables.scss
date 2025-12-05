@@ -5,7 +5,7 @@
 /* Typography 
    ========================================================================== */
 
-$doc-font-size: 16;
+$doc-font-size: 17;
 $paragraph-indent: false;
 $indent-var: 0.5em;
 
@@ -42,9 +42,10 @@ $type-size-8: 0.65em;   // Tiny
 /* Colors 
    ========================================================================== */
 
-/* Theme Colors (Yale Blue) */
-$yale-blue: #00356B; 
-$yale-light: #286dc0;
+/* Theme Colors (Modernized Yale Blue) */
+$yale-blue: #004aad; /* Slightly more vibrant than #00356B */
+$yale-light: #2e7dd6;
+$accent-color: #00e5ff; /* Cyan accent for modern touches */
 $cool-gray: #f4f6f9;
 
 $primary-color: $yale-blue;
@@ -58,12 +59,12 @@ $darker-gray: #1a2633;
 $light-gray: #f8f9fa;
 $lighter-gray: #e9ecef;
 
-$text-color: #333;
-$body-color: #fff;
-$background-color: #fff;
+$text-color: #2c3e50; /* Softer than #333 */
+$body-color: #fafafa; /* Premium off-white */
+$background-color: #fafafa;
 $code-background-color: #f6f8fa;
 $code-background-color-dark: $light-gray;
-$border-color: #e1e4e8;
+$border-color: #eaecef;
 
 /* Navigation Colors */
 $masthead-link-color: $primary-color;
@@ -125,8 +126,8 @@ $susy: (
 
 /* Other 
    ========================================================================== */
-$border-radius: 4px;
-$box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
+$border-radius: 8px;
+$box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 $navicon-width: 28px;
 $navicon-height: 4px;
 $global-transition: all 0.2s ease-in-out;
