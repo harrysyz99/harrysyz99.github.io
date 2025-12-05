@@ -323,22 +323,51 @@
   }
 }
 
-/* 1. Hero Bio Section (Clean Intro) */
+/* 1. Hero Bio Section (Modern Card Style) */
 .bio-hero {
-  padding: 2rem 0; /* Increased breathing room */
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+  padding: 2.5rem;
   margin-bottom: 2rem;
-  border-bottom: 1px solid $border-color;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 74, 173, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.8);
   
   h1 {
-    margin-top: 0 !important; /* Force remove top margin */
-    margin-bottom: 0.5rem;
+    margin-top: 0 !important;
+    margin-bottom: 1rem;
+    color: #1a202c;
   }
   
   p {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     line-height: 1.7;
     color: $text-color;
+    margin-bottom: 1rem;
   }
+  
+  /* Ensure last paragraph has no bottom margin */
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: $primary-color;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 74, 173, 0.2);
+    transition: all 0.2s;
+
+    &:hover {
+      color: $yale-light;
+      border-bottom-color: $yale-light;
+      background: rgba(0, 74, 173, 0.05);
+      border-radius: 4px;
+      padding: 0 2px;
+      margin: 0 -2px;
+    }
+  }
+}
 
   a {
     color: $primary-color;
