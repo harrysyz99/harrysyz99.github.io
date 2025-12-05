@@ -369,20 +369,6 @@
   }
 }
 
-  a {
-    color: $primary-color;
-    font-weight: 600;
-    text-decoration: none;
-    border-bottom: 2px solid rgba(0, 74, 173, 0.1);
-    transition: all 0.2s;
-
-    &:hover {
-      color: $yale-light;
-      border-bottom-color: $yale-light;
-    }
-  }
-}
-
 /* 2. Modern Timeline for News (Gradient Stream) */
 .timeline {
   position: relative;
