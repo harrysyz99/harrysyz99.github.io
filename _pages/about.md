@@ -45,12 +45,41 @@ redirect_from:
 
 <div class="timeline">
   <div class="timeline-item">
+    <span class="timeline-date">2026.08</span>
+    <div class="timeline-content">
+      Contributed to the release of <a href="https://arxiv.org/abs/2608.23283" target="_blank" rel="noopener noreferrer"><strong>Apodex 1.1</strong></a> during my summer research internship at <strong>Apodex</strong>. 🚀
+    </div>
+  </div>
+  <div class="timeline-item">
     <span class="timeline-date">2024.09</span>
     <div class="timeline-content">Started Ph.D. journey at <strong>Yale University</strong> in Prof. David van Dijk's lab! 🎉</div>
   </div>
   <div class="timeline-item">
     <span class="timeline-date">2024.05</span>
     <div class="timeline-content">Graduated with M.S. from <strong>Columbia University</strong>. 🎓</div>
+  </div>
+</div>
+
+<div id="experience"></div>
+<h2 style="border-bottom: none; margin-bottom: 1rem;">💼 Experience</h2>
+
+<div class="pub-card" style="padding: 1.5rem;">
+  <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap;">
+    <div>
+      <h3 style="font-size: 1.2rem; margin: 0; font-weight: 700;">Apodex</h3>
+      <div style="color: #444; margin-top: 0.35rem;">Research Intern</div>
+    </div>
+    <span style="font-size: 0.9rem; color: #666; font-family: monospace;">Summer 2026</span>
+  </div>
+  <div class="pub-desc">
+    <ul style="margin: 0; padding-left: 1.2rem;">
+      <li>Contributed to the release of <em>Apodex 1.1: Scaling Agentic Intelligence for Complex Work</em>.</li>
+      <li>Contributed to 50B-token data synthesis as well as the mid-training and post-training pipelines.</li>
+      <li>Implemented and iterated on improvements to the agentic system for complex, long-horizon work.</li>
+    </ul>
+  </div>
+  <div class="pub-links">
+    <a href="https://arxiv.org/abs/2608.23283" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i>&nbsp; Apodex 1.1</a>
   </div>
 </div>
 
@@ -84,6 +113,22 @@ redirect_from:
 
 <div id="publications"></div>
 <h2 style="border-bottom: none; margin-bottom: 1rem;">🌟 Selected Publications</h2>
+
+<div class="pub-card">
+  <h3>Apodex 1.1: Scaling Agentic Intelligence for Complex Work</h3>
+  <div class="pub-authors">
+    Apodex Team · Contributor: <strong>Shiyang Zhang</strong>
+  </div>
+  <div class="pub-info">
+    arXiv preprint, 2026
+  </div>
+  <div class="pub-desc">
+    A general-purpose model and execution system for long-horizon, verifiable work. My contributions spanned 50B-token data synthesis, mid-training, post-training, and improvements to the agentic system.
+  </div>
+  <div class="pub-links">
+    <a href="https://arxiv.org/abs/2608.23283" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Paper</a>
+  </div>
+</div>
 
 <div class="pub-card">
   <h3>Intelligence at the Edge of Chaos</h3>
