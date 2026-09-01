@@ -101,7 +101,7 @@ redirect_from:
 <div class="pub-card" style="padding: 1.5rem;">
   <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
     <h3 style="font-size: 1.2rem; margin: 0; font-weight: 700;">Columbia University</h3>
-    <span style="font-size: 0.9rem; color: #666; font-family: monospace;">2022 - 2024</span>
+    <span style="font-size: 0.9rem; color: #666; font-family: monospace;">2023 - 2024</span>
   </div>
   <div style="color: #444; margin-top: 0.5rem;">M.S. in Operation Research</div>
 </div>
@@ -109,7 +109,7 @@ redirect_from:
 <div class="pub-card" style="padding: 1.5rem;">
   <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
     <h3 style="font-size: 1.2rem; margin: 0; font-weight: 700;">University of British Columbia</h3>
-    <span style="font-size: 0.9rem; color: #666; font-family: monospace;">2018 - 2022</span>
+    <span style="font-size: 0.9rem; color: #666; font-family: monospace;">2018 - 2023</span>
   </div>
   <div style="color: #444; margin-top: 0.5rem;">B.Sc. in Statistics</div>
 </div>
