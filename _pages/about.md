@@ -47,7 +47,7 @@ redirect_from:
   <div class="timeline-item">
     <span class="timeline-date">2026.08</span>
     <div class="timeline-content">
-      Contributed to the release of <a href="https://arxiv.org/abs/2608.23283" target="_blank" rel="noopener noreferrer"><strong>Apodex 1.1</strong></a> during my summer research internship at <strong>Apodex</strong>. 🚀
+      Contributed to the development and release of <a href="https://arxiv.org/abs/2608.23283" target="_blank" rel="noopener noreferrer"><strong>Apodex 1.1</strong></a> during my summer research internship at <strong>Apodex</strong>. 🚀
     </div>
   </div>
   <div class="timeline-item">
@@ -73,9 +73,12 @@ redirect_from:
   </div>
   <div class="pub-desc">
     <ul style="margin: 0; padding-left: 1.2rem;">
-      <li>Contributed to the release of <em>Apodex 1.1: Scaling Agentic Intelligence for Complex Work</em>.</li>
-      <li>Contributed to 50B-token data synthesis as well as the mid-training and post-training pipelines.</li>
-      <li>Implemented and iterated on improvements to the agentic system for complex, long-horizon work.</li>
+      <li style="margin-bottom: 0.65rem;">Contributed to the development and release of <strong>Apodex 1.1: Scaling Agentic Intelligence for Complex Work</strong>, supporting the end-to-end model development process across large-scale data construction, mid-training, post-training, and agent-system evaluation.</li>
+      <li style="margin-bottom: 0.65rem;">Built and iterated on <strong>50B-token-scale data synthesis pipelines</strong> for mid-training and post-training, spanning data generation, filtering, quality control, task construction, and dataset validation across <strong>tool-use, health &amp; clinical, and agentic reasoning</strong> domains.</li>
+      <li style="margin-bottom: 0.65rem;">Developed large-scale <strong>tool-use training data and evaluation workflows</strong>, constructing diverse tool-interaction trajectories and multi-step tasks to improve models' ability to select, invoke, and coordinate tools in complex execution environments.</li>
+      <li style="margin-bottom: 0.65rem;">Contributed to <strong>health &amp; clinical data synthesis</strong> for model training through domain-specific data construction, quality filtering, and evaluation, while supporting broader <strong>AI4Science projects</strong> with scientific data generation and model evaluation workflows.</li>
+      <li style="margin-bottom: 0.65rem;">Implemented and improved the <strong>agentic system and execution harness</strong> for complex, long-horizon work, including task decomposition, tool interaction, and intermediate-state management.</li>
+      <li>Designed evaluation and iteration pipelines to systematically analyze agent failures, compare model checkpoints and data recipes, and identify bottlenecks in reasoning, tool selection, and end-to-end task completion.</li>
     </ul>
   </div>
   <div class="pub-links">
@@ -123,7 +126,7 @@ redirect_from:
     arXiv preprint, 2026
   </div>
   <div class="pub-desc">
-    A general-purpose model and execution system for long-horizon, verifiable work. My contributions spanned 50B-token data synthesis, mid-training, post-training, and improvements to the agentic system.
+    A general-purpose model and execution system for long-horizon, verifiable work. My contributions covered large-scale data construction, model training, agent-system development, and evaluation.
   </div>
   <div class="pub-links">
     <a href="https://arxiv.org/abs/2608.23283" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Paper</a>
